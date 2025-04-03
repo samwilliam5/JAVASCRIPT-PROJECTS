@@ -1,0 +1,64 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.todo_list{
+    height: 100vh;
+    background-color: #ccc;
+  
+}
+ul{
+   list-style: none;
+   color: #fff;
+}
+.input_field{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    height: 500px;
+    padding-top: 100px;
+    color: #fff;
+    background-color: #05465a;
+    border-radius: 15px;
+    position: relative;
+    top: 100px;
+
+
+}
+button{
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 3px solid #4a4a4a;
+    background-color: #4a4a4a;
+    color: #fff;
+}
+input{
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 3px solid #4a4a4a;
+    background-color: #4a4a4a;
+    color: #fff;
+
+}
+.deltebtn{
+    background-color: #ac040493;
+    border: 1px solid #ac040493;
+    
+
+}
+.list{
+    position: absolute;
+    top: 270px;
+    left: 440px;
+    width: 350px;
+    height: 315px;
+}
+span{
+    position: relative;
+    left: 187px;
+}
+li{
+    width: 350px;
+    padding: 10px;
+}
