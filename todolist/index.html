@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO LIST</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TODO LIST</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-    
-    <div class="todo_list">
-        
-        <div class="input_field">
-            <input type="text" placeholder="Enter a Todo..." onchange="inputChange(event)">
-            <button class="addbtn" onclick="addTodo()">Add Todo</button>
-        </div>
+  <div class="todo_list">
+    <div class="input_field">
+      <h1>Todo List</h1>
+      <input type="text" id="todoInput" placeholder="Enter a Todo..." />
+      <button class="addbtn" onclick="addTodo()">Add Todo</button>
 
-        <span class="error"></span>
-        <div class="list"></div>
+      <br><br>
 
+      <input type="text" id="searchInput" placeholder="Search todos..." onkeyup="searchTodos()" />
 
-
-
-        <script src="assets/js/script.js"></script>
+      <span class="error"></span>
     </div>
 
+    <div class="list"></div>
+  </div>
 
-
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

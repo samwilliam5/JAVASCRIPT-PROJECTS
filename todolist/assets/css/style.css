@@ -1,64 +1,92 @@
-*{
-    border: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-.todo_list{
-    height: 100vh;
-    background-color: #ccc;
+  }
   
-}
-ul{
-   list-style: none;
-   color: #fff;
-}
-.input_field{
-    text-align: center;
-    width: 50%;
-    margin: auto;
-    height: 500px;
-    padding-top: 100px;
-    color: #fff;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ccc;
+  }
+  
+  .todo_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 50px;
+  }
+  
+  .input_field {
     background-color: #05465a;
+    padding: 30px;
     border-radius: 15px;
-    position: relative;
-    top: 100px;
-
-
-}
-button{
-    padding: 5px 15px;
-    border-radius: 15px;
-    border: 3px solid #4a4a4a;
-    background-color: #4a4a4a;
+    width: 400px;
+    text-align: center;
     color: #fff;
-}
-input{
-    padding: 5px 15px;
-    border-radius: 15px;
-    border: 3px solid #4a4a4a;
-    background-color: #4a4a4a;
-    color: #fff;
-
-}
-.deltebtn{
-    background-color: #ac040493;
-    border: 1px solid #ac040493;
-    
-
-}
-.list{
-    position: absolute;
-    top: 270px;
-    left: 440px;
-    width: 350px;
-    height: 315px;
-}
-span{
-    position: relative;
-    left: 187px;
-}
-li{
-    width: 350px;
+    margin-bottom: 30px;
+  }
+  
+  .input_field input {
     padding: 10px;
-}
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid #4a4a4a;
+    background-color: #4a4a4a;
+    color: #fff;
+    width: 80%;
+  }
+  
+  button {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #4a4a4a;
+    color: white;
+    border: 2px solid #4a4a4a;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
+  
+  .error {
+    color: #ff4d4d;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .list {
+    width: 400px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  ul {
+    list-style: none;
+    background-color: #ffffff;
+    margin: 10px 0;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+  }
+  
+  .deletebtn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+  
+  .deletebtn:hover {
+    background-color: #c9302c;
+  }
+  

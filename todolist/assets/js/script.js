@@ -1,36 +1,36 @@
-let inputChanges = document.querySelector('input'); 
-let addbtn = document.querySelector('.addbtn'); 
-let list = document.querySelector('.list'); 
-let error = document.querySelector('.error'); 
+let inputField = document.querySelector('#todoInput');
+let searchField = document.querySelector('#searchInput');
+let list = document.querySelector('.list');
+let error = document.querySelector('.error');
 
+function addTodo() {
+  let value = inputField.value.trim();
+  if (value) {
+    const todoItem = document.createElement('ul');
+    todoItem.innerHTML = `
+      <li>
+        <span class="todo-text">${value}</span>
+        <button class='deletebtn' onclick='deleteTodo(this)'>Delete</button>
+      </li>`;
+    list.appendChild(todoItem);
 
-
-
-function inputChange(event){
-
-   addTodo(inputChanges.value);
-
-}
-
-function addTodo(value){
-
-    let html = '';
-
-if(value){
-    inputChanges.value = '';
-    console.log(value);
+    inputField.value = '';
     error.textContent = '';
-
-    html += `<ul><li>${value}<span><button class = 'deltebtn' onclick = "deleteBtn(this)">Delete Btn</button></span></li></ul>`
-}
-else{
-  error.textContent = 'Enter a todo list...';
-}
-list.innerHTML += html;
-
-
+  } else {
+    error.textContent = 'Please enter a todo item.';
+  }
 }
 
-function deleteBtn(current){
-    current.parentElement.remove();
+function deleteTodo(button) {
+  button.closest('ul').remove();
+}
+
+function searchTodos() {
+  const searchValue = searchField.value.toLowerCase();
+  const todos = document.querySelectorAll('.list ul');
+
+  todos.forEach(todo => {
+    const text = todo.querySelector('.todo-text').textContent.toLowerCase();
+    todo.style.display = text.includes(searchValue) ? '' : 'none';
+  });
 }
